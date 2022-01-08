@@ -30,7 +30,7 @@
 #customers-testimonials .item {
   text-align: center;
   padding: 50px;
-  
+
   opacity: 0.2;
   -webkit-transform: scale3d(0.8, 0.8, 1);
   transform: scale3d(0.8, 0.8, 1);
@@ -44,7 +44,7 @@
   transform: scale3d(1, 1, 1);
 }
 .owl-carousel .owl-item img {
-    border-radius: 100%;
+  border-radius: 100%;
   transform-style: preserve-3d;
   max-width: 90px;
   margin: 0 auto 17px;
@@ -83,22 +83,63 @@ body {
 
 /* == navbar == */
 .__logo-brand {
-  font-family: 'Anton', sans-serif;
+  //   font-family: 'Anton', sans-serif;
   font-size: 1.4rem;
-  font-weight: 600;
-  letter-spacing: 0.5;
-
-  
+  font-weight: bold;
+  //   letter-spacing: 0.5;
+  color: #198754 !important;
 }
 
 .__nav {
   margin-left: 40px;
 }
 
+.__price {
+  color: rgb(223, 43, 43);
+  font-weight: 600 !important;
+}
+
+.__notif {
+  font-size: 0.75rem !important;
+  color: #999c9e;
+}
+
+.__stock {
+  font-size: 0.75rem;
+}
+
+.__small-img-group {
+  flex-basis: 24px;
+
+  img {
+    border-radius: 15px !important;
+    width: 9.5rem;
+    height: 9.5rem;
+    background-repeat: no-repeat;
+    background-size: cover;
+    cursor: pointer;
+  }
+}
+
+.__img-big {
+  border-radius: 15px !important;
+  max-height: 60%;
+
+  img {
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+}
+
+.__description-complete {
+  font-size: 0.85rem !important;
+  line-height: 1.25rem;
+}
 
 /* == hero section == */
-.__hero-section {
-  // min-height: 90vh;
+.__hero-section,
+.__footer {
+  background-color: #fff;
 
   .__title-hero {
     font-size: 2.8rem;
@@ -126,4 +167,31 @@ body {
     padding-bottom: 50px;
     min-height: 100vh;
   }
+}
+
+.__box-product {
+  transition: transform 0.2s;
+  margin: 0 auto;
+  color: rgb(103, 107, 111);
+}
+
+.__box-product:hover {
+  margin: auto;
+  cursor: pointer;
+  transform: scale(1.02);
+  color: rgb(103, 107, 111) !important;
+}
+
+.__body-card {
+  color: rgb(103, 107, 111) !important;
+}
+
+.product-small {
+  max-width: 10rem;
+  padding-bottom: 20px;
+}
+
+.__breadcrumb,
+.__description {
+  background-color: #fff;
 }

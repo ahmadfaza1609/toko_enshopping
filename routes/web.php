@@ -5,6 +5,9 @@ use Illuminate\Support\Facades\Route;
 // front end
 use App\Http\Controllers\FrontendController;
 
+// Backend
+use App\Http\Controllers\Admin\AdminController;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -20,6 +23,12 @@ use App\Http\Controllers\FrontendController;
 Route::get('kategori', [FrontendController::class, 'kategori'])->name('kategori.landing');
 Route::get('detail/{id}', [FrontendController::class, 'detail'])->name('detail.landing');
 Route::resource('/', FrontendController::class);
+
+
+route::get('hero-landing', [AdminController::class, 'hero'])->name('hero.admin');
+route::get('kategori_product', [AdminController::class, 'kategori_product'])->name('kategori_product.admin');
+route::get('product', [AdminController::class, 'product'])->name('product.admin');
+route::resource('/admin', AdminController::class);
 
 // Route::get('/', function () {
 //     return view('welcome');

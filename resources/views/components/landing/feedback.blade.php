@@ -4,5 +4,5 @@
     </h1>
 </div>
 <div class="__btn-feedback ms-auto justify-content-center align-self-center me-5">
-    <a href="#" class="btn btn-primary btn-lg py-2 px-4 fw-600">Feedback</a>
+    <a href="#" class="btn btn-success btn-lg py-2 px-4 fw-600">Feedback</a>
 </div>

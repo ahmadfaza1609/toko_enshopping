@@ -17,7 +17,7 @@
                     <p class="lead">Pusing cari barang di marketplace? dengan belanja online terpercaya, amanah,
                         dan mudah hanya di EN-Shopping.</p>
                     <div class="d-grid gap-2 pt-4 d-md-flex justify-content-md-start">
-                        <a href="#" class="btn btn-primary btn-lg px-4 me-md-2">Belanja Sekarang</a>
+                        <a href="#" class="btn btn-success btn-lg px-4 me-md-2">Belanja Sekarang</a>
 
                     </div>
                 </div>
@@ -28,7 +28,7 @@
     {{-- Content Product --}}
     <div class="__content-product">
         <div class="container">
-            <div class="__header-text-product">
+            <div class="__header-text-product mt-5">
                 <h1 class="m-auto justify-content-center text-center lh-sm fw-bold fs-3  __title-product pb-3">Belanja
                     Produkmu Ditempat Marketplace Yang Anda Sering Gunakan</h1>
                 <p class="lead m-auto justify-content-center text-center lh-base fs-6 __lead-text">Mari belanja sesuai
@@ -158,7 +158,7 @@
     {{-- feedbacks --}}
     <div class="__feedback container pt-5 mb-5">
         <div class="__box-feedback bg-warning rounded shadow">
-            <div class="d-flex p-4 justify-content-between align-self-center">
+            <div class="d-flex p-4 justify-content-evenly align-self-center">
                 @include('components.landing.feedback')
             </div>
         </div>
