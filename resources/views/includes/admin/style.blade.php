@@ -6,3 +6,10 @@
 
     <!-- Custom styles for this template-->
     <link href="{{ asset('/css/sb-admin-2.min.css') }}" rel="stylesheet">
+
+    {{-- style dataTables --}}
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.0.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.11.3/css/dataTables.bootstrap5.min.css">
+
+    {{-- icon bootstrape --}}
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css">

@@ -24,7 +24,7 @@ class AdminController extends Controller
      */
     public function create()
     {
-        //
+        return view('pages.admin.product.create');
     }
 
     /**
@@ -93,4 +93,5 @@ class AdminController extends Controller
     public function hero(){
         return view('pages.admin.hero-landing.index');
     }
+
 }
