@@ -15,8 +15,6 @@ class CreateCategoryProductTable extends Migration
     {
         Schema::create('category_product', function (Blueprint $table) {
             $table->id();
-            // $table->integer('product_id')->nullable();
-            $table->foreignId('product_id')->nullable()->index('fk_category_product_to_product');
             $table->string('type_product')->nullable();
             $table->softDeletes();
             $table->timestamps();
