@@ -15,8 +15,7 @@ class CreateCategoryMarketTable extends Migration
     {
         Schema::create('category_market', function (Blueprint $table) {
             $table->id();
-            // $table->integer('product_id')->nullable();
-            $table->foreignId('product_id')->nullable()->index('fk_category_market_to_product');
+            $table->bigInteger('product_id');
             $table->string('type_market')->nullable();
             $table->softDeletes();
             $table->timestamps();

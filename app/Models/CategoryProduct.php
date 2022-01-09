@@ -21,16 +21,12 @@ class CategoryProduct extends Model
 
 
     protected $fillable = [
-        'product_id',
-        'type_product',
-        'updated_at',
-        'created_at',
-        'deleted_at',
+        'type_product'
     ];
 
     // one to many
     public function product()
     {
-        return $this->belongsTo('App/Models/Product', 'product_id', 'id');
+        return $this->hasMany(Product::class, 'category_id', 'id');
     }
 }

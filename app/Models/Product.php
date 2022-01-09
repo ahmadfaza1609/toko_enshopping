@@ -26,7 +26,10 @@ class Product extends Model
         'stock',
         'price',
         'photo',
-        'link',
+        'link_shoope',
+        'link_tokped',
+        'link_lazada',
+        'category_id',
         'updated_at',
         'created_at',
         'deleted_ad',
@@ -35,11 +38,11 @@ class Product extends Model
     // one to many
     public function category_product()
     {
-        return $this->hasMany('App\Models\CategoryProduct', 'product_id');
+        return $this->belongsTo(CategoryProduct::class, 'category_id', 'id');
     }
 
     public function category_market()
     {
-        return $this->hasMany('App\Models\CategoryMarket', 'product_id');
+        return $this->hasMany(CategoryMarket::class, 'product_id', 'id');
     }
 }
