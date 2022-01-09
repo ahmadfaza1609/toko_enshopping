@@ -40,10 +40,10 @@
     </div>
 
 
-    @stack('before-style')
+    @stack('before-script')
 
     @include('includes.admin.script')
 
-    @stack('after-style')
+    @stack('after-script')
 </body>
 </html>

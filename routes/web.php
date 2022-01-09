@@ -19,12 +19,13 @@ use App\Http\Controllers\Admin\AdminController;
 |
 */
 
-
+// landing
 Route::get('kategori', [FrontendController::class, 'kategori'])->name('kategori.landing');
 Route::get('detail/{id}', [FrontendController::class, 'detail'])->name('detail.landing');
 Route::resource('/', FrontendController::class);
 
-
+// admin
+route::get('edit', [AdminController::class, 'edit'])->name('edit.admin');
 route::get('tambah-data', [AdminController::class, 'create'])->name('create.admin');
 route::get('hero-landing', [AdminController::class, 'hero'])->name('hero.admin');
 route::get('kategori_product', [AdminController::class, 'kategori_product'])->name('kategori_product.admin');
