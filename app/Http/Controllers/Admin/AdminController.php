@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
+use App\Models\CategoryProduct;
 use Illuminate\Http\Request;
 
 class AdminController extends Controller
@@ -24,7 +25,8 @@ class AdminController extends Controller
      */
     public function create()
     {
-        return view('pages.admin.product.create');
+        $category = CategoryProduct::all();
+        return view('pages.admin.product.create', ['category' => $category]);
     }
 
     /**
@@ -57,7 +59,7 @@ class AdminController extends Controller
      */
     public function edit($id)
     {
-        //
+        // return view('pages.admin.product.');
     }
 
     /**

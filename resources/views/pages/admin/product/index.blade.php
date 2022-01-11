@@ -24,12 +24,16 @@
     </thead>
 
     <tbody>
+        <?php
+        $no = 1;
+        ?>
+        @foreach($product as $p)
         <tr class="text-center">
-            <td scope="row">1</td>
-            <td>jagung Bakar</td>
-            <td>Cemilan</td>
-            <td>32</td>
-            <td>Rp. 50.000</td>
+            <td scope="row"><?php echo $no ?></td>
+            <td>{{ $p->title}}</td>
+            <td>{{ $p->type_product}}</td>
+            <td>{{ $p->stock}}</td>
+            <td>{{ $p->price}}</td>
             <td>
                 <div class="row d-flex justify-content-center m-auto">
                     <div class="btn-view col-md-2">
@@ -39,11 +43,20 @@
                         <a href="#" class="btn btn-success"><i class="bi bi-pencil-square"></i></a>
                     </div>
                     <div class="btn-delete col-md-2">
-                        <a href="#" class="btn btn-danger "><i class="bi bi-trash"></i></a>
+                        <form action="product/hapus/{{ $p->id }}" method="post">
+                            @method('delete')
+                            @csrf
+                            <button class="btn btn-danger" onclick="return confirm('Are you sure?')"><i class="bi bi-trash"></i></button>
+                        </form>
+                        {{-- <a href="{{ route('hapus', $p->product_id) }}" class="btn btn-danger "><i class="bi bi-trash"></i></a> --}}
                     </div>
                 </div>
             </td>
         </tr>
+        <?php
+        $no++;
+        ?>
+        @endforeach
 
     </tbody>
 </table>

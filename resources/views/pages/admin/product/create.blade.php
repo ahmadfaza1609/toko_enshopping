@@ -11,7 +11,8 @@
         </div>
     </div>
     <!-- Page form create -->
-    <form method="POST" action="">
+    <form method="post" action="{{ route('create.product')}}" enctype="multipart/form-data">
+        @csrf
         <div class="col-md-8">
 
             <div class="mb-3">
@@ -25,6 +26,11 @@
                 <input type="text" class="form-control" id="stock" name="stock" placeholder="Masukkan stock barang"
                     autofocus required>
             </div>
+            <div class="mb-3">
+                <label for="stock" class="form-label">Harga Barang</label>
+                <input type="text" class="form-control" id="price" name="price" placeholder="Masukkan harga barang"
+                    autofocus required>
+            </div>
 
             <div class="mb-3">
                 <label for="photo" class="form-label">Foto Product</label>
@@ -34,11 +40,13 @@
 
             <div class="mb-3">
                 <label for="category" class="form-label">Kategori product</label>
-                <select class="form-select" aria-label="category">
+                <select class="form-select" aria-label="category" name="category_id">
                     <option selected>Pilih kategori product</option>
-                    <option value="1">One</option>
-                    <option value="2">Two</option>
-                    <option value="3">Three</option>
+                    @foreach($category as $c)
+                    <option value="{{ $c->id }}">{{ $c->type_product}}</option>
+                    {{-- <option value="2">Two</option>
+                    <option value="3">Three</option> --}}
+                    @endforeach
                 </select>
             </div>
 

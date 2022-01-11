@@ -7,6 +7,7 @@ use App\Http\Controllers\FrontendController;
 
 // Backend
 use App\Http\Controllers\Admin\AdminController;
+use App\Http\Controllers\ProductController;
 
 /*
 |--------------------------------------------------------------------------
@@ -29,8 +30,11 @@ route::get('edit', [AdminController::class, 'edit'])->name('edit.admin');
 route::get('tambah-data', [AdminController::class, 'create'])->name('create.admin');
 route::get('hero-landing', [AdminController::class, 'hero'])->name('hero.admin');
 route::get('kategori_product', [AdminController::class, 'kategori_product'])->name('kategori_product.admin');
-route::get('product', [AdminController::class, 'product'])->name('product.admin');
+// route::get('product', [AdminController::class, 'product'])->name('product.admin');
 route::resource('/admin', AdminController::class);
+Route::post('add', [ProductController::class, 'store'])->name('create.product');
+Route::get('product', [ProductController::class, 'index'])->name('product.admin');
+Route::delete('product/hapus/{product_id}', [ProductController::class, 'destroy'])->name('hapus');
 
 // Route::get('/', function () {
 //     return view('welcome');

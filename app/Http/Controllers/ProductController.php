@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 use App\Models\Product;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 
 class ProductController extends Controller
 {
@@ -13,7 +14,10 @@ class ProductController extends Controller
      */
     public function index()
     {
-        //
+        $product = DB::table('product')
+            ->leftJoin('category_product', 'product.category_id', '=', 'category_product.id')
+            ->get();
+	    return view('pages.admin.product.index', ['product' => $product]);
     }
 
     /**
@@ -43,12 +47,11 @@ class ProductController extends Controller
         $dtUpload->stock = $request->stock;
         $dtUpload->price = $request->price;
         $dtUpload->photo = $namaFile;
-        $dtUpload->link = $request->link;
+        $dtUpload->category_id = $request->category_id;
+        $dtUpload->link_shoope = $request->link_shoope;
+        $dtUpload->link_tokped = $request->link_tokped;
+        $dtUpload->link_lazada = $request->link_lazada;
 
-
-        if ($dtUpload->data_text == null) {
-            $dtUpload->data_text = "none";
-        }
 
         $nm->move(public_path().'/data_photo', $namaFile);
         // $dtUpload->save;
@@ -59,9 +62,16 @@ class ProductController extends Controller
             'stock'=>$dtUpload->stock,
             'price'=>$dtUpload->price,
             'photo'=>$dtUpload->photo,
-            'link'=>$dtUpload->link
+            'category_id'=>$dtUpload->category_id,
+            'link_shoope'=>$dtUpload->link_shoope,
+            'link_tokped'=>$dtUpload->link_tokped,
+            'link_lazada'=>$dtUpload->link_lazada
+
         ]);
-        return view('show', compact('file'));
+        // $product = DB::table('product')
+        // ->leftJoin('category_product', 'product.category_id', '=', 'category_product.id')
+        // ->get();
+        return redirect('product');
     }
 
     /**
@@ -70,9 +80,16 @@ class ProductController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
+    public function hapus($id)
     {
-        //
+        $product =Product::where('id',$id)->first();
+
+        if ($product != null) {
+            $product->delete();
+            return redirect()->route('dashboard')->with(['message'=> 'Successfully deleted!!']);
+        }
+
+        return redirect()->route('product.admin')->with(['message'=> 'Wrong ID!!']);
     }
 
     /**
@@ -101,13 +118,12 @@ class ProductController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  int  $id
+      * @param  \App\Models\Product $product
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
+    public function destroy( Product $product)
     {
-        $Product = Product::find($id);
-        $Product->delete();
-
+        Product::destroy($product->id);
+        return redirect('product')->with('succes', 'Product berhasil dihapus');
     }
 }

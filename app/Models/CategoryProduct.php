@@ -21,7 +21,10 @@ class CategoryProduct extends Model
 
 
     protected $fillable = [
-        'type_product'
+        'type_product',
+        'updated_at',
+        'created_at',
+        'deleted_ad'
     ];
 
     // one to many

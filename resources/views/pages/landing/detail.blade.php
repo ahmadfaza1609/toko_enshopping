@@ -31,20 +31,20 @@
                                 <img class="rounded small-img"
                                     src="{{ url('https://media.istockphoto.com/photos/mens-tshirt-isolated-on-a-white-background-picture-id1193475675?s=2048x2048') }}" width="100%"
                                     alt="">
-        
+
                                 <img class="rounded small-img"
                                     src="{{ url('https://media.istockphoto.com/photos/blank-navy-tshirt-clothes-on-isolated-white-background-picture-id1266681859?s=2048x2048') }}"
                                     width="100%"
                                     alt="">
-        
+
                                 <img class="rounded small-img"
                                     src="{{ url('https://media.istockphoto.com/photos/blank-gray-tshirt-clothes-on-isolated-white-background-picture-id1266680002?s=2048x2048') }}"
                                     width="100%"
                                     alt="">
-        
+
                             </div>
                     </div>
-                    
+
 
 
 
