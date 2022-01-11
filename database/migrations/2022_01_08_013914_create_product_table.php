@@ -23,7 +23,7 @@ class CreateProductTable extends Migration
             $table->string('link_shoope')->nullable();
             $table->string('link_tokped')->nullable();
             $table->string('link_lazada')->nullable();
-            $table->bigInteger('category_id');
+            $table->string('category_id');
             $table->softDeletes();
             $table->timestamps();
         });
