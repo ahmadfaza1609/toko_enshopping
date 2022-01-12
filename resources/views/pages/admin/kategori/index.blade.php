@@ -1,6 +1,6 @@
 @extends('layouts.app')
 
-@section('title', 'Product')
+@section('title', 'kategori')
 
 @section('content')
 <div class="text-left">
@@ -8,7 +8,7 @@
     <p class="fs-6">Semua data product masuk dalam tabel dibawah ini</p>
     <div class="btn-component my-4">
         <div class="btn">
-            <a href="{{ route('create.admin')}}" class="btn btn-primary btn-sm" tabindex="-1" role="button" aria-disabled="true">
+            <a href="" class="btn btn-primary btn-sm" tabindex="-1" role="button" aria-disabled="true">
                 <i class="bi bi-plus"></i>
                 Tambah Data
             </a>
@@ -29,16 +29,12 @@
     </thead>
 
     <tbody>
-        <?php
-        $no = 1;
-        ?>
-        @foreach($product as $p)
         <tr class="text-center">
-            <td scope="row"><?php echo $no ?></td>
-            <td>{{ $p->title}}</td>
-            <td>{{ $p->type_product}}</td>
-            <td>{{ $p->stock}}</td>
-            <td>{{ $p->price}}</td>
+            <td scope="row">1</td>
+            <td>ini producy</td>
+            <td>ini kategory</td>
+            <td>stok</td>
+            <td>50.000</td>
             <td>
                 <div class="row d-flex justify-content-center m-auto">
                     <div class="btn-view col-md-2">
@@ -48,20 +44,13 @@
                         <a href="#" class="btn btn-success"><i class="bi bi-pencil-square"></i></a>
                     </div>
                     <div class="btn-delete col-md-2">
-                        <form action="product/hapus/{{ $p->id }}" method="post">
-                            @method('delete')
-                            @csrf
-                            <button class="btn btn-danger" onclick="return confirm('Are you sure?')"><i class="bi bi-trash"></i></button>
-                        </form>
-                        {{-- <a href="{{ route('hapus', $p->product_id) }}" class="btn btn-danger "><i class="bi bi-trash"></i></a> --}}
+
+                        <a href="" class="btn btn-danger "><i class="bi bi-trash"></i></a>
                     </div>
                 </div>
             </td>
         </tr>
-        <?php
-        $no++;
-        ?>
-        @endforeach
+
 
     </tbody>
 </table>

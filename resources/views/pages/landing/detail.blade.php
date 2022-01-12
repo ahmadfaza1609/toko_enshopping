@@ -26,7 +26,7 @@
                     <div class="col-lg-5 col-md-12 col-12 product-image justify-content-center m-auto">
                         <img class="__img-big w-100 img-fluid rounded" id="MainImg" src="{{ url('https://media.istockphoto.com/photos/mens-tshirt-isolated-on-a-white-background-picture-id1193475675?s=2048x2048') }}"
                             alt="image">
-
+{{-- 
                             <div class="__small-img-group d-flex justify-content-between pt-2">
                                 <img class="rounded small-img"
                                     src="{{ url('https://media.istockphoto.com/photos/mens-tshirt-isolated-on-a-white-background-picture-id1193475675?s=2048x2048') }}" width="100%"
@@ -42,7 +42,7 @@
                                     width="100%"
                                     alt="">
 
-                            </div>
+                            </div> --}}
                     </div>
 
 

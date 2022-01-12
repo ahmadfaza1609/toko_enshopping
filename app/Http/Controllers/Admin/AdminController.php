@@ -90,7 +90,7 @@ class AdminController extends Controller
         return view('pages.admin.product.index');
     }
     public function kategori_product(){
-        return view('pages.admin.kategori');
+        return view('pages.admin.kategori.index');
     }
     public function hero(){
         return view('pages.admin.hero-landing.index');
