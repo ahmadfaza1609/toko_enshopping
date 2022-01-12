@@ -15,6 +15,7 @@ class CreateProductTable extends Migration
     {
         Schema::create('product', function (Blueprint $table) {
             $table->id();
+            $table->foreignId('category_id');
             $table->string('title');
             $table->longText('description')->nullable();
             $table->string('stock')->nullable();
@@ -23,7 +24,6 @@ class CreateProductTable extends Migration
             $table->string('link_shoope')->nullable();
             $table->string('link_tokped')->nullable();
             $table->string('link_lazada')->nullable();
-            $table->bigInteger('category_id');
             $table->softDeletes();
             $table->timestamps();
         });

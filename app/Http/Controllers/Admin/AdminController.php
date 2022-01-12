@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
 use App\Models\CategoryProduct;
+use App\Models\Product;
 use Illuminate\Http\Request;
 
 class AdminController extends Controller
@@ -54,12 +55,17 @@ class AdminController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  int  $id
+    //  * @param  int  $id
+     * @param  \App\Models\Product
+
      * @return \Illuminate\Http\Response
      */
     public function edit($id)
     {
-        // return view('pages.admin.product.');
+        // dd($id);
+        $product = Product::find($id);
+        return view('pages.admin.product.update', ['product'=>$product,'category'=> CategoryProduct::all()
+    ]);
     }
 
     /**

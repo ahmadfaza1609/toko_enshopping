@@ -26,15 +26,18 @@ Route::get('detail/{id}', [FrontendController::class, 'detail'])->name('detail.l
 Route::resource('/', FrontendController::class);
 
 // admin
-route::get('edit', [AdminController::class, 'edit'])->name('edit.admin');
+route::get('edit/{id}', [AdminController::class, 'edit'])->name('edit.admin');
 route::get('tambah-data', [AdminController::class, 'create'])->name('create.admin');
 route::get('hero-landing', [AdminController::class, 'hero'])->name('hero.admin');
 route::get('kategori_product', [AdminController::class, 'kategori_product'])->name('kategori_product.admin');
 // route::get('product', [AdminController::class, 'product'])->name('product.admin');
+
 route::resource('/admin', AdminController::class);
 Route::post('add', [ProductController::class, 'store'])->name('create.product');
 Route::get('product', [ProductController::class, 'index'])->name('product.admin');
-Route::delete('product/hapus/{product_id}', [ProductController::class, 'destroy'])->name('hapus');
+Route::delete('hapus/{id}', [ProductController::class, 'destroy'])->name('delete.product');
+Route::put('update/{id}', [ProductController::class, 'update'])->name('update.product');
+
 
 // Route::get('/', function () {
 //     return view('welcome');

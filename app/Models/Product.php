@@ -9,7 +9,7 @@ use Illuminate\Database\Eloquent\SoftDeletes;
 class Product extends Model
 {
     // use HasFactory;
-    use SoftDeletes;
+    // use SoftDeletes;
 
     public $table = 'product';
 
@@ -42,8 +42,8 @@ class Product extends Model
         return $this->belongsTo(CategoryProduct::class, 'category_id', 'id');
     }
 
-    public function category_market()
-    {
-        return $this->hasMany(CategoryMarket::class, 'product_id', 'id');
-    }
+    // public function category_market()
+    // {
+    //     return $this->hasMany(CategoryMarket::class, 'product_id', 'id');
+    // }
 }

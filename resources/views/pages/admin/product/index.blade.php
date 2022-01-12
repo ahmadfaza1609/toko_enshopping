@@ -31,7 +31,7 @@
         <tr class="text-center">
             <td scope="row"><?php echo $no ?></td>
             <td>{{ $p->title}}</td>
-            <td>{{ $p->type_product}}</td>
+            <td>{{ $p->category_product->type_product}}</td>
             <td>{{ $p->stock}}</td>
             <td>{{ $p->price}}</td>
             <td>
@@ -40,15 +40,15 @@
                         <a href="#" class="btn btn-warning "><i class="bi bi-eye-fill"></i></a>
                     </div>
                     <div class="btn-edit col-md-2">
-                        <a href="#" class="btn btn-success"><i class="bi bi-pencil-square"></i></a>
+                        <a href="{{ route('edit.admin', $p->id) }}" class="btn btn-success"><i class="bi bi-pencil-square"></i></a>
                     </div>
                     <div class="btn-delete col-md-2">
-                        <form action="product/hapus/{{ $p->id }}" method="post">
+                        <form action="{{ route('delete.product', $p->id) }}" method="post">
                             @method('delete')
                             @csrf
-                            <button class="btn btn-danger" onclick="return confirm('Are you sure?')"><i class="bi bi-trash"></i></button>
+                            <button type="submit" class="btn btn-danger" onclick="return confirm('Are you sure?')"><i class="bi bi-trash"></i></button>
                         </form>
-                        {{-- <a href="{{ route('hapus', $p->product_id) }}" class="btn btn-danger "><i class="bi bi-trash"></i></a> --}}
+                        {{-- <a href="{{ route('delete.product', $p->id) }}" class="btn btn-danger "><i class="bi bi-trash"></i></a> --}}
                     </div>
                 </div>
             </td>
