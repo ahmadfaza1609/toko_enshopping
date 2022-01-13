@@ -127,6 +127,7 @@ class ProductController extends Controller
 
         return redirect('product')->with('succes', 'Product berhasil diupdate');
 
+
     }
 
     /**
