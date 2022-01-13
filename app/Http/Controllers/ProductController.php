@@ -69,7 +69,7 @@ class ProductController extends Controller
         // $product = DB::table('product')
         // ->leftJoin('category_product', 'product.category_id', '=', 'category_product.id')
         // ->get();
-        return redirect('product');
+        return redirect('product')->with('succes', 'Product berhasil ditambah');
     }
 
     /**

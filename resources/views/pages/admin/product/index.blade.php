@@ -1,8 +1,12 @@
 @extends('layouts.app')
 
 @section('title', 'Product')
-
 @section('content')
+@if (session('succes'))
+<div class="alert alert-success">
+    {{ session('succes') }}
+</div>
+@endif
 <div class="text-left">
     <h2 class="fw-bold fs-4">@yield('title')</h2>
     <p class="fs-6">Semua data product masuk dalam tabel dibawah ini</p>

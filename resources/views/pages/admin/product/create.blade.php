@@ -34,8 +34,7 @@
 
             <div class="mb-3">
                 <label for="photo" class="form-label">Foto Product</label>
-                <input class="form-control" type="file" id="photo" name="photo" placeholder="Foto product" autofocus
-                    required>
+                <input class="form-control" type="file" id="photo" name="photo" placeholder="Foto product" autofocus>
             </div>
 
             <div class="mb-3">
