@@ -33,17 +33,19 @@ class LoginController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function authenticate(Request $request)
     {
         $credentials = $request->validate([
-            'email'=> 'required|email:dns',
+            'email'=> 'required|email',
             'password' => 'required'
         ]);
 
-        if(Auth::attempt($credentials)){
+        if (Auth::attempt($credentials)){
             $request->session()->regenerate();
-            return redirect()->intended('product'); 
+            return redirect()->intended('product');
         }
+
+        return back()->with('loginEror', 'Salah Password / Email');
 
     }
 

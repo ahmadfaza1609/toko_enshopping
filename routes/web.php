@@ -39,6 +39,7 @@ Route::get('product', [ProductController::class, 'index'])->name('product.admin'
 Route::delete('hapus/{id}', [ProductController::class, 'destroy'])->name('delete.product');
 Route::put('update/{id}', [ProductController::class, 'update'])->name('update.product');
 Route::get('login', [LoginController::class, 'index'])->name('login');
+Route::post('product/login', [LoginController::class, 'authenticate'])->name('login.product');
 
 
 // Route::get('/', function () {
