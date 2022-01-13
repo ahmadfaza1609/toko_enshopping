@@ -1,13 +1,10 @@
 <?php
 
-namespace App\Http\Controllers\Admin;
+namespace App\Http\Controllers;
 
-use App\Http\Controllers\Controller;
-use App\Models\CategoryProduct;
-use App\Models\Product;
 use Illuminate\Http\Request;
 
-class AdminController extends Controller
+class LoginController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -16,7 +13,7 @@ class AdminController extends Controller
      */
     public function index()
     {
-        return view('pages.admin.index');
+        return view('pages.login.index');
     }
 
     /**
@@ -26,8 +23,7 @@ class AdminController extends Controller
      */
     public function create()
     {
-        $category = CategoryProduct::all();
-        return view('pages.admin.product.create', ['category' => $category]);
+        //
     }
 
     /**
@@ -55,17 +51,12 @@ class AdminController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-    //  * @param  int  $id
-     * @param  \App\Models\Product
-
+     * @param  int  $id
      * @return \Illuminate\Http\Response
      */
     public function edit($id)
     {
-        // dd($id);
-        $product = Product::find($id);
-        return view('pages.admin.product.update', ['product'=>$product,'category'=> CategoryProduct::all()
-    ]);
+        //
     }
 
     /**
@@ -90,16 +81,4 @@ class AdminController extends Controller
     {
         //
     }
-
-    // costume
-    public function product(){
-        return view('pages.admin.product.index');
-    }
-    public function kategori_product(){
-        return view('pages.admin.kategori.index');
-    }
-    public function hero(){
-        return view('pages.admin.hero-landing.index');
-    }
-
 }

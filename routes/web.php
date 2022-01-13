@@ -7,6 +7,7 @@ use App\Http\Controllers\FrontendController;
 
 // Backend
 use App\Http\Controllers\Admin\AdminController;
+use App\Http\Controllers\LoginController;
 use App\Http\Controllers\ProductController;
 
 /*
@@ -37,6 +38,7 @@ Route::post('add', [ProductController::class, 'store'])->name('create.product');
 Route::get('product', [ProductController::class, 'index'])->name('product.admin');
 Route::delete('hapus/{id}', [ProductController::class, 'destroy'])->name('delete.product');
 Route::put('update/{id}', [ProductController::class, 'update'])->name('update.product');
+Route::get('login', [LoginController::class, 'index'])->name('login');
 
 
 // Route::get('/', function () {

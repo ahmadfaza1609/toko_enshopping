@@ -72,7 +72,7 @@
 
     </div>
 
-    {{-- testimonials --}}
+    {{-- testimonials
     <div class="testimonials mt-5 mb-5" id="feedback">
         <!-- TESTIMONIALS -->
         <div class="container">
@@ -153,7 +153,7 @@
             </div>
         </div>
         <!-- END OF TESTIMONIALS -->
-    </div>
+    </div> --}}
 
     {{-- feedbacks --}}
     <div class="__feedback container pt-5 mb-5">
