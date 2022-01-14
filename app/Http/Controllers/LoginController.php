@@ -30,8 +30,8 @@ class LoginController extends Controller
     /**
      * Store a newly created resource in storage.
      *
-     * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\Http\Response
+    //  * @param  \Illuminate\Http\Request  $request
+    //  * @return \Illuminate\Http\Response
      */
     public function authenticate(Request $request)
     {
@@ -47,6 +47,16 @@ class LoginController extends Controller
 
         return back()->with('loginEror', 'Salah Password / Email');
 
+    }
+
+    public function logout(Request $request){
+        Auth::logout();
+
+        $request->session()->invalidate();
+
+        $request->session()->regenerateToken();
+
+         return redirect('/');
     }
 
     /**
