@@ -50,7 +50,7 @@
             </div>
 
             <div class="__product-shop mb-4">
-                @include('components.landing.product')
+                @include('components.landing.product', ['product' => $product])
             </div>
 
             <div class="__pagination mt-4 pb-5">

@@ -1,7 +1,7 @@
 <?php
 
 namespace App\Http\Controllers;
-
+use App\Models\Product;
 use Illuminate\Http\Request;
 
 class FrontendController extends Controller
@@ -13,7 +13,8 @@ class FrontendController extends Controller
      */
     public function index()
     {
-        return view('pages.landing.index');
+        $product = Product::all();
+        return view('pages.landing.index', ['product' => $product]);
     }
 
     /**
@@ -82,10 +83,11 @@ class FrontendController extends Controller
         //
     }
 
-    
+
 
     // costume
     public function detail($id){
+        
         return view('pages.landing.detail');
     }
 
@@ -94,4 +96,3 @@ class FrontendController extends Controller
     }
 
 }
- 
