@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
 
 <head>
 
@@ -39,7 +39,7 @@
                                     <div class="text-center">
                                         <h1 class="h4 text-gray-900 mb-4">Hallo Admin!</h1>
                                     </div>
-                                    <form class="user" action="{{ route('login.product') }}" method="post">
+                                    <form class="user" action="{{ route('login.product') }}" method="POST">
                                         @csrf
                                         <div class="form-group">
                                             <input type="email" class="form-control form-control-user" name="email"
@@ -53,13 +53,7 @@
                                         <button type="submit" class="btn btn-primary btn-user btn-block" >Login</button>
 
                                     </form>
-                                    {{-- <hr>
-                                    <div class="text-center">
-                                        <a class="small" href="forgot-password.html">Forgot Password?</a>
-                                    </div>
-                                    <div class="text-center">
-                                        <a class="small" href="register.html">Create an Account!</a>
-                                    </div> --}}
+
                                 </div>
                             </div>
                         </div>

@@ -49,3 +49,7 @@ Route::post('product/login', [LoginController::class, 'authenticate'])->name('lo
 // Auth::routes();
 
 // Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+
+// Auth::routes();
+
+// Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
