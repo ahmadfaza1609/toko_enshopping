@@ -50,7 +50,9 @@
             </div>
 
             <div class="__product-shop mb-4">
-                @include('components.landing.product', ['product' => $product])
+            @foreach($product as $p)
+                @include('components.landing.product')
+                @endforeach
             </div>
 
             <div class="__pagination mt-4 pb-5">

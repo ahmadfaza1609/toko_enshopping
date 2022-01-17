@@ -1,6 +1,5 @@
 <div class="row row-cols-1 row-cols-sm-2 row-cols-md-4 g-3">
     <div class="col">
-        @foreach($product as $p)
         <a href="{{ route('detail.landing', $p->id) }}" class="text-decoration-none __body-card">
             <div class="card shadow rounded __box-product ">
                 <img src="{{ url('https://via.placeholder.com/750x500') }}" alt="placeholder" class="card-img-top" width="100%" height="225"/>
@@ -15,7 +14,6 @@
                 </div>
             </div>
         </a>
-        @endforeach
     </div>
 
 </div>
