@@ -34,11 +34,12 @@
                 <p class="lead m-auto justify-content-center text-center lh-base fs-6 __lead-text">Mari belanja sesuai
                     seleramu dengan marketplace seperti shopee, lazada, dan tokopedia akun yang kamu punya.</p>
             </div>
-
-            <div class="input-group __search mt-4 m-auto justify-content-center">
-                <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-                <button class="btn btn-outline-success" type="submit">Search</button>
-            </div>
+            <form action="/">
+                <div class="input-group __search mt-4 m-auto justify-content-center">
+                    <input class="form-control me-2" type="search" placeholder="Search" name="search" value="{{ request('search')}}">
+                    <button class="btn btn-outline-success" type="submit">Search</button>
+                </div>
+            </form>
 
             <div class="d-flex justify-content-center py-5">
                 <ul class="nav link-dark fs-6">
@@ -61,7 +62,7 @@
 
                                         <div class="card-body">
                                             <h1 class="card-title fs-5 fw-bold">{{ $p->title}} </h1>
-                                            <p class="card-text __price">{{ $p->price}}</p>
+                                            <p class="card-text __price">Rp. {{ $p->price}}</p>
                                             <div class="d-flex justify-content-between align-items-center pt-3">
 
                                             </div>
@@ -73,22 +74,8 @@
                     @endforeach
                 </div>
             </div>
+            <div class="d-flex justify-content-center">{{ $product->links() }}</div>
 
-            <div class="__pagination mt-4 pb-5">
-                <nav aria-label="Page navigation example">
-                    <ul class="pagination justify-content-center">
-                        <li class="page-item disabled">
-                            <a class="page-link">Previous</a>
-                        </li>
-                        <li class="page-item"><a class="page-link link-dark" href="#">1</a></li>
-                        <li class="page-item"><a class="page-link link-dark" href="#">2</a></li>
-                        <li class="page-item"><a class="page-link link-dark" href="#">3</a></li>
-                        <li class="page-item">
-                            <a class="page-link link-dark" href="#">Next</a>
-                        </li>
-                    </ul>
-                </nav>
-            </div>
         </div>
 
     </div>

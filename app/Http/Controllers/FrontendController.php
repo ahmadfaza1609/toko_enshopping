@@ -13,8 +13,8 @@ class FrontendController extends Controller
      */
     public function index()
     {
-        $product = Product::all();
-        return view('pages.landing.index', ['product' => $product]);
+
+        return view('pages.landing.index', ['product' => Product::latest()->filter(request(['search', 'category']))->paginate(8)->withQueryString()]);
     }
 
     /**
