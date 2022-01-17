@@ -3,7 +3,7 @@
 <head>
     @include('includes.landing.meta')
 
-    <title>@yield('title') | EN-Shopping</title>
+    <title>@yield('title') | BUMDES</title>
 
     @method('before-style')
 
