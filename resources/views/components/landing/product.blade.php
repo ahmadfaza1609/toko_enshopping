@@ -1,5 +1,4 @@
 
-
     <div class="col">
         <a href="{{ route('detail.landing', $p->id) }}" class="text-decoration-none __body-card">
             <div class="card shadow rounded __box-product ">
