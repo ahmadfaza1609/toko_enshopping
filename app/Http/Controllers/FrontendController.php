@@ -13,8 +13,8 @@ class FrontendController extends Controller
      */
     public function index()
     {
-        $product = Product::all();
-        return view('pages.landing.index', ['product' => $product]);
+
+        return view('pages.landing.index', ['product' => Product::latest()->filter(request(['search', 'category']))->paginate(16)->withQueryString()]);
     }
 
     /**
@@ -87,8 +87,10 @@ class FrontendController extends Controller
 
     // costume
     public function detail($id){
-        
-        return view('pages.landing.detail');
+        // dd($id);
+        $product = new Product();
+        $product = $product->find($id);
+        return view('pages.landing.detail',['product' => $product]);
     }
 
     public function kategori(){
