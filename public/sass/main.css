@@ -103,6 +103,7 @@ body {
 
 .__nav {
   margin-left: 40px;
+  cursor: pointer;
 }
 
 .__price {

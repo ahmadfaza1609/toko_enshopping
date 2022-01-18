@@ -6,3 +6,5 @@
 <link rel="stylesheet" href="{{ url('https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.1.1/assets/owl.carousel.min.css') }}">
 
 <link rel="stylesheet" href="{{ url('https://themes.audemedia.com/html/goodgrowth/css/owl.theme.default.min.css') }}">
+
+

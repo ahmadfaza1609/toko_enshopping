@@ -5,7 +5,7 @@
 @section('content')
 
     {{-- Hero Section --}}
-    <div class="__hero-section" id="product">
+    <div class="__hero-section">
         <div class="container col-xxl-8 px-4 py-5">
             <div class="row flex-lg-row-reverse align-items-center g-5 py-5">
                 <div class="col-10 col-sm-8 col-lg-6">
@@ -36,7 +36,7 @@
             </div>
             <form action="/search" method="GET" role="search">
                 {{ csrf_field() }}
-                <div class="input-group __search mt-4 m-auto justify-content-center">
+                <div class="input-group __search mt-4 m-auto justify-content-center"  id="product">
                     <input class="form-control me-2" type="search" placeholder="Search" name="search"
                         value="{{ request('search') }}">
                     <button class="btn btn-outline-success" type="submit">Search</button>
