@@ -48,8 +48,16 @@ integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+
 {{-- scroll page --}}
 <script>
 const links = document.querySelectorAll(".nav-link");
+const links2 = document.querySelectorAll(".link-product");
 
 links.forEach((item) => {
+    item.addEventListener("click",()=>
+    {
+        let el = document.getElementById(item.getAttribute("data-link"));
+        el.scrollIntoView({behavior:"smooth",block:"center"});
+    })
+})
+links2.forEach((item) => {
     item.addEventListener("click",()=>
     {
         let el = document.getElementById(item.getAttribute("data-link"));
