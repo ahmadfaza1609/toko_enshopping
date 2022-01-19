@@ -3,7 +3,7 @@
 <head>
     @include('includes.landing.meta')
 
-    <title>Toko Online Bumdes Mekar Jaya Sei Pakning | @yield('title')</title>
+    <title>@yield('title') | BUMDES Mekar Jaya</title>
 
     @method('before-style')
 

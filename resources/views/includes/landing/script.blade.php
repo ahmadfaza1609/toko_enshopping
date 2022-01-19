@@ -17,7 +17,7 @@ integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+
 
 <script src="{{ url('https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.1.1/owl.carousel.min.js') }}"></script>
 
-<script>
+<script type="text/javascript">
     jQuery(document).ready(function($) {
         "use strict";
         //  TESTIMONIALS CAROUSEL HOOK
@@ -46,7 +46,7 @@ integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+
 </script>
 
 {{-- scroll page --}}
-<script>
+<script type="text/javascript">
 const links = document.querySelectorAll(".nav-link");
 const links2 = document.querySelectorAll(".link-product");
 

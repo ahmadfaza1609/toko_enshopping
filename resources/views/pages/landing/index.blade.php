@@ -1,6 +1,6 @@
 @extends('layouts.front')
 
-@section('title', 'Home Page')
+@section('title', 'Toko Online Bumdes Mekar Jaya Sei Pakning')
 
 @section('content')
 

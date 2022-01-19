@@ -1,6 +1,6 @@
 @extends('layouts.front')
 
-@section('title', 'Detail Product')
+@section('title', 'Toko Online Bumdes Mekar Jaya Sei Pakning Detail Product')
 
 @section('content')
     <div class="container">
