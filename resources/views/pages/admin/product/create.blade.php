@@ -39,7 +39,7 @@
 
             <div class="mb-3">
                 <label for="category" class="form-label">Kategori product</label>
-                <select class="form-select" aria-label="category" name="category_id">
+                <select class="form-select" aria-label="category" name="category_id" required>
                     <option selected>Pilih kategori product</option>
                     @foreach($category as $c)
                     <option value="{{ $c->id }}">{{ $c->type_product}}</option>

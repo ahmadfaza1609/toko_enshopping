@@ -7,6 +7,7 @@ use App\Http\Controllers\FrontendController;
 
 // Backend
 use App\Http\Controllers\Admin\AdminController;
+use App\Http\Controllers\CategoryController;
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\ProductController;
 
@@ -30,9 +31,9 @@ Route::resource('/', FrontendController::class);
 route::get('edit/{id}', [AdminController::class, 'edit'])->name('edit.admin');
 route::get('tambah-data', [AdminController::class, 'create'])->name('create.admin');
 route::get('hero-landing', [AdminController::class, 'hero'])->name('hero.admin');
-route::get('kategori_product', [AdminController::class, 'kategori_product'])->name('kategori_product.admin');
 // route::get('product', [AdminController::class, 'product'])->name('product.admin');
 
+route::get('kategori_product', [CategoryController::class, 'index'])->name('kategori_product.admin');
 route::resource('/admin', AdminController::class)->middleware('auth');
 Route::post('add', [ProductController::class, 'store'])->name('create.product')->middleware('auth');
 Route::get('product', [ProductController::class, 'index'])->name('product.admin')->middleware('auth');

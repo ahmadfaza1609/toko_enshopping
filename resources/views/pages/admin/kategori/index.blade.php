@@ -20,26 +20,21 @@
     <thead>
         <tr class="text-center">
             <th scope="col">No</th>
-            <th scope="col">Nama Product</th>
             <th scope="col">Kategori</th>
-            <th scope="col">Stok</th>
-            <th scope="col">Harga</th>
             <th scope="col">Aksi</th>
         </tr>
     </thead>
 
     <tbody>
+        <?php
+        $no = 1;
+        ?>
+        @foreach($category as $c)
         <tr class="text-center">
-            <td scope="row">1</td>
-            <td>ini producy</td>
-            <td>ini kategory</td>
-            <td>stok</td>
-            <td>50.000</td>
+            <td scope="row"><?php echo $no ?></td>
+            <td>{{ $c->type_product }}</td>
             <td>
                 <div class="row d-flex justify-content-center m-auto">
-                    <div class="btn-view col-md-2">
-                        <a href="#" class="btn btn-warning "><i class="bi bi-eye-fill"></i></a>
-                    </div>
                     <div class="btn-edit col-md-2">
                         <a href="#" class="btn btn-success"><i class="bi bi-pencil-square"></i></a>
                     </div>
@@ -50,8 +45,10 @@
                 </div>
             </td>
         </tr>
-
-
+        <?php
+        $no++;
+        ?>
+        @endforeach
     </tbody>
 </table>
 @endsection

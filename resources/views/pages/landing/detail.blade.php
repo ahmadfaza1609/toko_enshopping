@@ -51,9 +51,9 @@
                                     </div>
                                     <div class="col-6">
                                         <p class="__stock">Stok barang : <b>{{ $product->stock}}</b></p>
-                                        <a href="#" class="btn btn-warning">Shopee</a>
-                                        <a href="#" class="btn btn-success">Lazada</a>
-                                        <a href="#" class="btn btn-primary">Tokopedia</a>
+                                        <a href="{{ $product->link_shoope }}" target="_blank" class="btn btn-warning">Shopee</a>
+                                        <a href="{{ $product->link_lazada }}" target="_blank" class="btn btn-success">Lazada</a>
+                                        <a href="{{ $product->link_tokped }}" target="_blank" class="btn btn-primary">Tokopedia</a>
                                     </div>
                                 </div>
                             </div>

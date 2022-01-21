@@ -13,9 +13,9 @@
                         alt="Bootstrap Themes" width="700" height="500" loading="lazy">
                 </div>
                 <div class="col-lg-6">
-                    <h1 class="display-5 fw-bold mb-4 lh-sm __title-hero">Belanja Mudah Hanya Di BUMDES Sei. Pakning</h1>
+                    <h1 class="display-5 fw-bold mb-4 lh-sm __title-hero">Belanja Mudah Hanya Di BUMDES Mekar Jaya Sungai Pakning</h1>
                     <p class="lead">Pusing cari barang di marketplace? dengan belanja online terpercaya, amanah,
-                        dan mudah hanya di BUMDES Sei.Pakning.</p>
+                        dan mudah hanya di BUMDES Mekar Jaya sungai pakning.</p>
                     <div class="d-grid gap-2 pt-4 d-md-flex justify-content-md-start">
                         <a href="#" class="btn btn-success btn-lg px-4 me-md-2">Belanja Sekarang</a>
 
@@ -34,11 +34,9 @@
                 <p class="lead m-auto justify-content-center text-center lh-base fs-6 __lead-text">Mari belanja sesuai
                     seleramu dengan marketplace seperti shopee, lazada, dan tokopedia akun yang kamu punya.</p>
             </div>
-            <form action="/search" method="GET" role="search">
-                {{ csrf_field() }}
-                <div class="input-group __search mt-4 m-auto justify-content-center"  id="product">
-                    <input class="form-control me-2" type="search" placeholder="Search" name="search"
-                        value="{{ request('search') }}">
+             <form action="/">
+                <div class="input-group __search mt-4 m-auto justify-content-center">
+                    <input class="form-control me-2" type="search" placeholder="Search" name="search" value="{{ request('search')}}">
                     <button class="btn btn-outline-success" type="submit">Search</button>
                 </div>
             </form>

@@ -1,10 +1,11 @@
 <?php
 
 namespace App\Http\Controllers;
-use App\Models\Product;
+
+use App\Models\CategoryProduct;
 use Illuminate\Http\Request;
 
-class FrontendController extends Controller
+class CategoryController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -13,8 +14,7 @@ class FrontendController extends Controller
      */
     public function index()
     {
-
-        return view('pages.landing.index', ['product' => Product::latest()->filter(request(['search', 'category']))->paginate(16)->withQueryString()]);
+        return view('pages.admin.kategori.index', ['category' => CategoryProduct::all()]);
     }
 
     /**
@@ -82,16 +82,4 @@ class FrontendController extends Controller
     {
         //
     }
-
-
-
-    // costume
-    public function detail($id){
-        // dd($id);
-        $product = new Product();
-        $product = $product->find($id);
-        return view('pages.landing.detail',['product' => $product]);
-    }
-
-
 }
