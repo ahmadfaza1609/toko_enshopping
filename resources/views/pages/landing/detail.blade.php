@@ -1,6 +1,6 @@
 @extends('layouts.front')
 
-@section('title', 'Detail Product')
+@section('title', 'Toko Online Bumdes Mekar Jaya Sei Pakning Detail Product')
 
 @section('content')
     <div class="container">
@@ -24,13 +24,7 @@
                     <div class="col-lg-5 col-md-12 col-12 product-image justify-content-center m-auto">
                         <img class="__img-big w-100 img-fluid rounded" id="MainImg" src="{!! asset('data_photo/'.$product->photo ) !!}"
                             alt="image">
-
                     </div>
-
-
-
-
-
                 </div>
                 <div class="mt-5">
                     <div class="description">

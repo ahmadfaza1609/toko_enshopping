@@ -3,7 +3,7 @@
 <head>
     @include('includes.landing.meta')
 
-    <title>@yield('title') | BUMDES</title>
+    <title>@yield('title') | BUMDES Mekar Jaya</title>
 
     @method('before-style')
 

@@ -1,6 +1,6 @@
 @extends('layouts.front')
 
-@section('title', 'Home Page')
+@section('title', 'Toko Online Bumdes Mekar Jaya Sei Pakning')
 
 @section('content')
 
@@ -17,7 +17,7 @@
                     <p class="lead">Pusing cari barang di marketplace? dengan belanja online terpercaya, amanah,
                         dan mudah hanya di BUMDES Mekar Jaya sungai pakning.</p>
                     <div class="d-grid gap-2 pt-4 d-md-flex justify-content-md-start">
-                        <a href="#" class="btn btn-success btn-lg px-4 me-md-2">Belanja Sekarang</a>
+                        <a data-link="product" class="btn link-product btn-success btn-lg px-4 me-md-2">Belanja Sekarang</a>
 
                     </div>
                 </div>
@@ -34,6 +34,7 @@
                 <p class="lead m-auto justify-content-center text-center lh-base fs-6 __lead-text">Mari belanja sesuai
                     seleramu dengan marketplace seperti shopee, lazada, dan tokopedia akun yang kamu punya.</p>
             </div>
+
              <form action="/">
                 <div class="input-group __search mt-4 m-auto justify-content-center">
                     <input class="form-control me-2" type="search" placeholder="Search" name="search" value="{{ request('search')}}">
