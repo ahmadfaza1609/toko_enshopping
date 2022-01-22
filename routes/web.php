@@ -36,6 +36,7 @@ route::get('hero-landing', [AdminController::class, 'hero'])->name('hero.admin')
 route::get('kategori_product', [CategoryController::class, 'index'])->name('kategori_product.admin');
 route::resource('/admin', AdminController::class)->middleware('auth');
 Route::post('add', [ProductController::class, 'store'])->name('create.product')->middleware('auth');
+Route::get('Tambah_youtube', [ProductController::class, 'tambah_youtube'])->name('create.youtube')->middleware('auth');
 Route::get('product', [ProductController::class, 'index'])->name('product.admin')->middleware('auth');
 Route::delete('hapus/{id}', [ProductController::class, 'destroy'])->name('delete.product')->middleware('auth');
 Route::put('update/{id}', [ProductController::class, 'update'])->name('update.product')->middleware('auth');

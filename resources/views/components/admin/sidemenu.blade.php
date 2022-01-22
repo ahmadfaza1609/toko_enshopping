@@ -40,27 +40,9 @@
                 <h6 class="collapse-header">Landing Page:</h6>
                 <a class="collapse-item" href="{{ route('product.admin') }}">Product</a>
                 <a class="collapse-item" href="{{ route('kategori_product.admin') }}">Kategori</a>
-                <a class="collapse-item" href="{{ route('hero.admin') }}">Hero landing</a>
-                <div class="collapse-divider"></div>
-                <h6 class="collapse-header">Other Pages:</h6>
-                <a class="collapse-item" href="#">404 Page</a>
-                <a class="collapse-item active" href="#">Blank Page</a>
+                <a class="collapse-item" href="{{ route('create.youtube') }}">Upload Youtube</a>
             </div>
         </div>
-    </li>
-
-    <!-- Nav Item - Charts -->
-    <li class="nav-item">
-        <a class="nav-link" href="charts.html">
-            <i class="fas fa-fw fa-chart-area"></i>
-            <span>Charts</span></a>
-    </li>
-
-    <!-- Nav Item - Tables -->
-    <li class="nav-item">
-        <a class="nav-link" href="tables.html">
-            <i class="fas fa-fw fa-table"></i>
-            <span>Tables</span></a>
     </li>
 
     <!-- Divider -->

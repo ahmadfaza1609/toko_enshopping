@@ -143,4 +143,9 @@ class ProductController extends Controller
         Product::destroy($id->id);
         return redirect('product')->with('succes', 'Product berhasil dihapus');
     }
+
+    // youtube
+    public function tambah_youtube(){
+        return view('pages.admin.tambah_youtube');
+    }
 }
