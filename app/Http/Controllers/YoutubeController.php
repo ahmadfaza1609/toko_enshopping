@@ -2,9 +2,10 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Youtube;
 use Illuminate\Http\Request;
 
-class Test extends Controller
+class YoutubeController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -13,7 +14,8 @@ class Test extends Controller
      */
     public function index()
     {
-        //
+        $youtube = Youtube::all();
+	    return view('pages.admin.index', ['youtube' => $youtube]);
     }
 
     /**
@@ -34,7 +36,14 @@ class Test extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $request->validate([
+            'link' => 'required',
+            'status' => 'required',
+          ]);
+          $input = $request->all();
+
+          $yt = Youtube::create($input);
+          return back()->with('success',' Post baru berhasil dibuat.');
     }
 
     /**
@@ -51,12 +60,16 @@ class Test extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  int  $id
+   //  * @param  int  $id
+     * @param  \App\Models\Product
+
      * @return \Illuminate\Http\Response
      */
     public function edit($id)
     {
-        //
+        // dd($id);
+        $yt = Youtube::find($id);
+        return view('pages.admin.edit', ['youtube'=>$yt]);
     }
 
     /**
@@ -68,17 +81,25 @@ class Test extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $request->validate([
+            'link' => 'required',
+            'status' => 'required',
+          ]);
+
+         $yt = Youtube::find($id)->update($request->all());
+
+         return redirect('/admin')->with('success',' Data telah diperbaharui!');
     }
 
     /**
      * Remove the specified resource from storage.
      *
-     * @param  int  $id
+     * @param  \App\Models\Youtube
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
+    public function destroy(Youtube $id)
     {
-        //
+        Youtube::destroy($id->id);
+        return redirect('/admin')->with('succes', 'Product berhasil dihapus');
     }
 }

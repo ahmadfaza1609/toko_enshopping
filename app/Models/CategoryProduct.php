@@ -9,7 +9,7 @@ use Illuminate\Database\Eloquent\softDeletes;
 class CategoryProduct extends Model
 {
     // use HasFactory;
-    use SoftDeletes;
+    // use SoftDeletes;
 
     public $table = 'category_product';
 
