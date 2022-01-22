@@ -34,24 +34,9 @@
                 <p class="lead m-auto justify-content-center text-center lh-base fs-6 __lead-text">Mari belanja sesuai
                     seleramu dengan marketplace seperti shopee, lazada, dan tokopedia akun yang kamu punya.</p>
             </div>
-<<<<<<< Updated upstream
-=======
-<<<<<<< HEAD
-            <form action="/" method="GET" role="search">
-                {{ csrf_field() }}
-                <div class="input-group __search mt-4 m-auto justify-content-center" id="product">
-                    <input class="form-control me-2" type="search" placeholder="Search" name="search"
-                        value="{{ request('search') }}">
-=======
->>>>>>> Stashed changes
-
              <form action="/">
                 <div class="input-group __search mt-4 m-auto justify-content-center">
                     <input class="form-control me-2" type="search" placeholder="Search" name="search" value="{{ request('search')}}">
-<<<<<<< Updated upstream
-=======
->>>>>>> 23e22a5e0f7c280d161b9cb6e2de5876cb75ddf2
->>>>>>> Stashed changes
                     <button class="btn btn-outline-success" type="submit">Search</button>
                 </div>
             </form>
@@ -85,29 +70,6 @@
 
         </div>
 
-    </div>
-
-    {{-- courrusel video --}}
-    <div id="carouselExampleFade" class=" mt-5 carousel slide carousel-fade" data-bs-ride="carousel">
-        <div class="carousel-inner container">
-            <div class="carousel-item active rounded-sm">
-                <iframe width="200" height="400" src="{{ url('https://www.youtube.com/embed/2XORHHSf3V8') }}" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" class="d-block w-100" allowfullscreen></iframe>
-            </div>
-            <div class="carousel-item rounded-sm">
-                <iframe width="200" height="400" src="{{ url('https://www.youtube.com/embed/2XORHHSf3V8') }}" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" class="d-block w-100" allowfullscreen></iframe>
-            </div>
-            <div class="carousel-item rounded-sm">
-                <iframe width="200" height="400" src="{{ url('https://www.youtube.com/embed/2XORHHSf3V8') }}" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" class="d-block w-100" allowfullscreen></iframe>
-            </div>
-        </div>
-        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="prev">
-            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">Previous</span>
-        </button>
-        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="next">
-            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">Next</span>
-        </button>
     </div>
 
 
