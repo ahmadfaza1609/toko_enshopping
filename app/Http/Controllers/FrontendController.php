@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 use App\Models\Product;
+use App\Models\Youtube;
 use Illuminate\Http\Request;
 
 class FrontendController extends Controller
@@ -13,8 +14,9 @@ class FrontendController extends Controller
      */
     public function index()
     {
+        $yt = Youtube::all();
 
-        return view('pages.landing.index', ['product' => Product::latest()->filter(request(['search', 'category']))->paginate(16)->withQueryString()]);
+        return view('pages.landing.index', ['youtube'=>$yt,'product' => Product::latest()->filter(request(['search', 'category']))->paginate(16)->withQueryString()]);
     }
 
     /**

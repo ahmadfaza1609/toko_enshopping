@@ -76,8 +76,10 @@
 
     <div id="carouselExampleFade" class=" mt-5 carousel slide carousel-fade" data-bs-ride="carousel">
         <div class="carousel-inner container">
-            <div class="carousel-item active rounded-sm">
-                <iframe width="200" height="400" src="{{ url('https://www.youtube.com/embed/cVEmxwyuG_M')}}" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" class="d-block w-100" allowfullscreen></iframe>
+            @foreach ($youtube as $y)
+            <div class="carousel-item {{$y->status}} rounded-sm">
+                <iframe width="200" height="400" src="{{ url($y->link)}}" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" class="d-block w-100" allowfullscreen></iframe>
+                @endforeach
             </div>
         </div>
     </div>
