@@ -29,9 +29,9 @@
     <div class="__content-product">
         <div class="container">
             <div class="__header-text-product mt-5">
-                <h1 class="m-auto justify-content-center text-center lh-sm fw-bold fs-3  __title-product pb-3">Belanja
+                <h1 class="m-auto justify-content-center text-center lh-sm fw-bold fs-3  __title-product pb-3" >Belanja
                     Produkmu Ditempat Marketplace Yang Anda Sering Gunakan</h1>
-                <p class="lead m-auto justify-content-center text-center lh-base fs-6 __lead-text">Mari belanja sesuai
+                <p class="lead m-auto justify-content-center text-center lh-base fs-6 __lead-text" id="product">Mari belanja sesuai
                     seleramu dengan marketplace seperti shopee, lazada, dan tokopedia akun yang kamu punya.</p>
             </div>
              <form action="/">
@@ -70,6 +70,16 @@
 
         </div>
 
+    </div>
+
+    {{-- video youtube --}}
+
+    <div id="carouselExampleFade" class=" mt-5 carousel slide carousel-fade" data-bs-ride="carousel">
+        <div class="carousel-inner container">
+            <div class="carousel-item active rounded-sm">
+                <iframe width="200" height="400" src="{{ url('https://www.youtube.com/embed/cVEmxwyuG_M')}}" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" class="d-block w-100" allowfullscreen></iframe>
+            </div>
+        </div>
     </div>
 
 

@@ -15,9 +15,9 @@ $(document).ready(function() {
 </script>
 
 {{-- dataTable --}}
-<script src="https://code.jquery.com/jquery-3.5.1.js"></script>
-<script src="https://cdn.datatables.net/1.11.3/js/jquery.dataTables.min.js"></script>
-<script src="https://cdn.datatables.net/1.11.3/js/dataTables.bootstrap5.min.js"></script>
+<script src="{{url('https://code.jquery.com/jquery-3.5.1.js')}}"></script>
+<script src="{{url('https://cdn.datatables.net/1.11.3/js/jquery.dataTables.min.js')}}"></script>
+<script src="{{url('https://cdn.datatables.net/1.11.3/js/dataTables.bootstrap5.min.js')}}"></script>
 
 <script src="{{ url('https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.1.1/owl.carousel.min.js') }}"></script>
 <script src="{{ url('https://cdnjs.cloudflare.com/ajax/libs/owl-carousel/1.3.3/owl.carousel.css') }}"></script>
